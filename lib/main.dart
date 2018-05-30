@@ -25,6 +25,7 @@ class _NewsPageState extends State<NewsPage> {
   var index=0;
   List<News> _list=new List<News>();
   Future<List<News>> fetchNews() async{
+    //Use your own api key if this stops working
     final response=await http.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=f8c15ba22b0b4ec08dd9f84c3480d709');
     Map map=json.decode(response.body);
     final responseJson=json.decode(response.body);
